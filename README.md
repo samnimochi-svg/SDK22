@@ -4,6 +4,9 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Android](https://img.shields.io/badge/Android-7.0%2B%20(API%2024%2B)-green.svg)](https://developer.android.com)
+[![Download APK](https://img.shields.io/badge/Download-APK-brightgreen.svg?logo=android)](https://github.com/samnimochi-svg/SDK22/releases/download/v_1.0/SDK22.apk)
+
+[📥 **最新の APK をダウンロード (v1.0)**](https://github.com/samnimochi-svg/SDK22/releases/download/v_1.0/SDK22.apk)
 
 **SDK22** は、端末に保存されたGalax-ShhのAPKファイルを、Androidの**ワイヤレスデバッグ**機能を利用してインストールするアプリです。
 
