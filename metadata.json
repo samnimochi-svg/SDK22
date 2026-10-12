@@ -1,0 +1,6 @@
+{
+  "name": "SDK22",
+  "description": "Silent APK installer supporting legacy APKs (targetSdk 22 and below) via in-app wireless debugging ADB client with pre-install security audit",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

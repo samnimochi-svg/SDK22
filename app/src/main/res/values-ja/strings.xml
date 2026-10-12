@@ -1,0 +1,203 @@
+<resources>
+    <string name="app_name">SDK22</string>
+
+    <!-- Main Screen & ADB Wireless Debugging Status -->
+    <string name="adb_state_unpaired_title">ワイヤレスデバッグ: 未ペアリング</string>
+    <string name="adb_state_unpaired_desc">接続前にワイヤレスデバッグとのペアリング（初回のみ）が必要です。</string>
+    <string name="adb_state_paired_title">ワイヤレスデバッグ: ペアリング済み・未接続</string>
+    <string name="adb_state_paired_desc">端末はペアリング済みです。ADBシェルに接続してインストールを開始してください。</string>
+    <string name="adb_state_connected_title">ワイヤレスデバッグ: 接続中 (shell有効)</string>
+    <string name="adb_state_connected_desc">%1$s:%2$d に接続中。サイレントインストールが可能です。</string>
+    <string name="adb_state_error_title">ワイヤレスデバッグ: エラー</string>
+    <string name="adb_state_error_desc">%1$s</string>
+
+    <!-- Buttons -->
+    <string name="btn_open_dev_settings">開発者オプションを開く</string>
+    <string name="btn_pair">ペアリング</string>
+    <string name="btn_auto_connect">自動接続 (mDNS)</string>
+    <string name="btn_manual_connect">手動接続</string>
+    <string name="btn_disconnect">切断</string>
+    <string name="btn_reset_pairing">ペアリング解除</string>
+    <string name="btn_start_pairing_notification">通知を表示してコード入力</string>
+    <string name="btn_cancel">キャンセル</string>
+    <string name="btn_connect">接続</string>
+
+    <!-- Wireless Debugging Guidance -->
+    <string name="guide_title">ワイヤレスデバッグの設定手順案内</string>
+    <string name="guide_step_wifi">1. ワイヤレスデバッグにはWi-Fi接続が必須です。</string>
+    <string name="guide_step_enable">2. 開発者向けオプションを開き、「ワイヤレスデバッグ」をONにしてください。</string>
+    <string name="guide_step_pair">3. 「ペア設定コードによるデバイスのペア設定」を開くと画面上部に通知が表示されます。設定画面から離れずに、通知内の［コード入力］から画面の6桁コードを入力して送信してください（初回のみ）。※本アプリに戻るとコードがリセットされます。</string>
+    <string name="guide_step_note">4. 端末の再起動やWi-Fiの切り替え時には、ワイヤレスデバッグの再有効化が必要になります。</string>
+    <string name="guide_step_autoblocker">※「ワイヤレスデバッグ」がグレーアウトしてONにできない場合は、セキュリティ設定の「自動ブロッカー」を一時的にOFFにしてください。</string>
+
+    <!-- Pairing & Connect Dialogs -->
+    <string name="dialog_pair_title">ワイヤレスデバッグのペアリング</string>
+    <string name="dialog_pair_desc">開発者オプションの「ペア設定コードによるデバイスのペア設定」を開くと、画面上部に通知が自動表示されます。設定画面を開いたまま通知の［コード入力］から画面の6桁コードを入力・送信するだけでペアリングが完了します（このダイアログから手動入力することも可能です）。</string>
+    <string name="dialog_connect_title">手動ADB接続</string>
+    <string name="dialog_connect_desc">開発者オプションの「ワイヤレスデバッグ」項目に表示されているIPアドレスとポート番号を入力してください。</string>
+    <string name="input_host">ホスト / IPアドレス</string>
+    <string name="input_port">接続ポート</string>
+    <string name="input_pairing_port">ペア設定ポート</string>
+    <string name="input_pairing_code">6桁のペア設定コード</string>
+
+    <!-- Notification Strings -->
+    <string name="notification_channel_name">ADBペアリング</string>
+    <string name="notification_channel_desc">ワイヤレスデバッグのペア設定コード入力用通知</string>
+    <string name="notification_action_input_code">コード入力</string>
+    <string name="notification_action_open_input_popup">コード入力</string>
+    <string name="notification_remote_input_hint">画面の6桁コードを入力 (例: 123456)</string>
+    <string name="notification_pairing_title">ペア設定コードの入力</string>
+    <string name="notification_pairing_desc">［コード入力］をタップして画面の6桁コードを送信してください</string>
+    <string name="notification_pairing_waiting_desc">開発者オプションで「ペア設定コードによるデバイスのペア設定」を開いてください</string>
+    <string name="notification_pairing_big_text">設定画面を開いたまま、この通知の［コード入力］をタップして画面の6桁コードを直接送信してください。\n※アプリ画面に切り替えるとコードが無効化されます。</string>
+    <string name="notification_pairing_waiting_big_text">開発者オプションの「ペア設定コードによるデバイスのペア設定」を開くと、この通知から直接コード入力できるようになります。</string>
+    <string name="notification_pairing_in_progress">ペアリング処理を実行中...</string>
+    <string name="notification_pairing_success_title">ペアリング完了</string>
+    <string name="notification_pairing_success_msg">ワイヤレスデバッグのペアリングに成功しました。接続中...</string>
+    <string name="notification_pairing_failed_title">ペアリング失敗</string>
+    <string name="notification_pairing_failed_msg">ペアリングに失敗しました。画面に表示されている6桁コードを再度入力してください。</string>
+
+    <!-- APK Select Action Card -->
+    <string name="apk_parsing">APKを解析中...</string>
+    <string name="apk_select_title">APKファイルを選択</string>
+    <string name="apk_select_desc">.apk / .apks / .apkm 対応\n端末のストレージからファイルを選択します</string>
+    <string name="btn_select_file">ファイルを選択 (SAF)</string>
+
+    <!-- Feature Highlights -->
+    <string name="feat_target_sdk_title">targetSdk 22以下のレガシーAPKを回避インストール</string>
+    <string name="feat_target_sdk_desc">Android 14以降の「INSTALL_FAILED_DEPRECATED_SDK_VERSION」エラーを、ローカルADBワイヤレスデバッグのバイパスフラグにより安全に回避します。</string>
+    <string name="feat_security_title">事前セキュリティ監査</string>
+    <string name="feat_security_desc">デジタル署名の完全性、デバッグ証明書、分割APKの改ざん、高リスクな権限組み合わせを端末ローカルで自動監査します。</string>
+
+    <!-- Confirm Dialog Meta Badges -->
+    <string name="badge_target_sdk">targetSdk %1$d</string>
+    <string name="badge_min_sdk">minSdk %1$d</string>
+    <string name="badge_split_apk">分割APK (%1$d個)</string>
+    <string name="badge_single_apk">単一APK</string>
+
+    <!-- Confirm Dialog Warnings -->
+    <string name="warn_target_sdk_22_title">INSTALL_FAILED_DEPRECATED_SDK_VERSION 回避モード</string>
+    <string name="warn_target_sdk_22_desc">このAPKは targetSdk %1$d を対象としています。Android標準のインストーラーでは拒絶されますが、ADBワイヤレスデバッグ経由のバイパスでインストール可能です。</string>
+    <string name="warn_missing_base_title">base.apk が見つかりません</string>
+    <string name="warn_missing_base_desc">分割パッケージ内に基本APK（base.apk）が含まれていないため、インストールを続行できません。</string>
+    <string name="warn_min_sdk_incompatible_title">非対応の端末APIレベル</string>
+    <string name="warn_min_sdk_incompatible_desc">APKの minSdkVersion (%1$d) が端末のAPIレベル (%2$d) より高いため、この端末では動作しません。</string>
+    <string name="warn_downgrade_title">ダウングレード警告</string>
+    <string name="warn_downgrade_desc">既に端末にインストール済みのバージョン (%1$s, code %2$d) より古いバージョン (%3$s, code %4$d) をインストールしようとしています。</string>
+    <string name="warn_cert_mismatch_title">署名証明書の不一致</string>
+    <string name="warn_cert_mismatch_desc">端末にインストールされている既存アプリと、このAPKの署名証明書が異なります。アンインストールしない限り更新できません。</string>
+
+    <!-- Confirm Dialog Sections -->
+    <string name="dialog_title_confirm">インストール確認</string>
+    <string name="dialog_section_metadata">パッケージ情報</string>
+    <string name="dialog_section_security">事前セキュリティ監査</string>
+    <string name="dialog_section_permissions">要求される権限 (%1$d件)</string>
+    <string name="dialog_section_install_status">インストール進捗</string>
+    <string name="dialog_pkg_name">パッケージ名</string>
+    <string name="dialog_version">バージョン</string>
+    <string name="dialog_installed_version">端末の既存版</string>
+    <string name="dialog_source_path">ファイルパス</string>
+    <string name="dialog_file_size">合計ファイルサイズ</string>
+    <string name="dialog_security_summary">総合セキュリティ評価</string>
+    <string name="dialog_show_more_permissions">すべての権限を表示 (%1$d件)...</string>
+    <string name="dialog_show_less_permissions">権限一覧を折りたたむ</string>
+    <string name="dialog_consent_checkbox">セキュリティ上の注意点を理解した上で、インストールを続行します。</string>
+
+    <!-- Buttons in Dialog -->
+    <string name="btn_close">閉じる</string>
+    <string name="btn_install">ADBでインストール</string>
+    <string name="btn_launch_app">インストールしたアプリを起動</string>
+
+    <!-- Install Progress & Results -->
+    <string name="install_preparing">ADBインストールの準備中...</string>
+    <string name="progress_creating_session">ADB経由でインストールセッションを作成中...</string>
+    <string name="progress_streaming_apk">APKデータを端末へ転送中 (%1$d%%)...</string>
+    <string name="progress_streaming_split">分割APK [%1$d/%2$d] を転送中 (%3$d%%)...</string>
+    <string name="progress_committing">インストールセッションを完了中...</string>
+    <string name="install_success_title">インストール成功</string>
+    <string name="install_success_msg">%1$s のインストールが正常に完了しました。</string>
+    <string name="install_failed_title">インストール失敗</string>
+    <string name="install_failed_code">エラーコード: %1$d</string>
+    <string name="install_error_generic">インストール失敗: %1$s</string>
+    <string name="install_exception_msg">インストール処理中に例外が発生しました: %1$s</string>
+
+    <!-- Errors -->
+    <string name="err_adb_not_connected">ADBが接続されていません。ワイヤレスデバッグに接続してください。</string>
+    <string name="err_pairing_port_unknown">ペア設定ポートが不明です。アプリのペアリング画面でポートを指定してください。</string>
+    <string name="err_no_apk_files">インストール対象のAPKファイルが見つかりません。</string>
+
+    <!-- Security Check Engine Strings -->
+    <string name="sec_target_sdk_legacy_title">レガシー targetSdkVersion: %1$d</string>
+    <string name="sec_target_sdk_legacy_desc">Android 9以前向けにビルドされています。最新のプライバシー保護機能やバックグラウンド制限が適用されない可能性があります。</string>
+    <string name="sec_target_sdk_modern_title">適合 targetSdkVersion %1$d</string>
+    <string name="sec_target_sdk_modern_desc">最新のAndroidセキュリティ基準（API %1$d）に準拠してビルドされています。</string>
+    <string name="sec_sig_missing_title">デジタル署名の欠落・破損</string>
+    <string name="sec_sig_missing_desc">APKから有効なデジタル署名が検出されませんでした。改ざんまたは破損の危険性があります。</string>
+    <string name="sec_debug_key_title">デバッグ用テスト証明書による署名</string>
+    <string name="sec_debug_key_desc">公式のリリース鍵ではなく、Android開発用のデバッグ鍵 (androiddebugkey) で署名されています。非公式ビルドの可能性があります。</string>
+    <string name="sec_expired_cert_title">署名証明書の有効期限切れ</string>
+    <string name="sec_expired_cert_desc">署名証明書の有効期限が切れています。古いアプリでは一般的ですが、真正性の保証レベルは低下します。</string>
+    <string name="sec_valid_sig_title">検証済みのデジタル署名</string>
+    <string name="sec_valid_sig_desc">有効なリリース証明書で署名されています。SHA-256フィンガープリントを確認済みです。</string>
+    <string name="sec_split_unsigned_title">分割APKの一部に署名がありません</string>
+    <string name="sec_split_unsigned_desc">アーカイブ内に署名のない分割APKが含まれています。パッケージの整合性に問題があります。</string>
+    <string name="sec_split_mismatch_title">分割APK間の署名不一致（改ざん検知）</string>
+    <string name="sec_split_mismatch_desc">base.apkと分割APKで署名証明書が異なります。一部のファイルが差し替えられたか改ざんされている恐れがあります。</string>
+    <string name="sec_split_valid_title">全%1$d個の分割APKの署名整合性を確認</string>
+    <string name="sec_split_valid_desc">すべての分割APKがbase.apkと同一の証明書で正しく署名されていることを確認しました。</string>
+    <string name="sec_sms_net_title">高リスク組み合わせ: SMS送受信＋ネットワーク通信</string>
+    <string name="sec_sms_net_desc">2要素認証のワンタイムパスワードやSMS内容を傍受し、外部サーバーへ送信可能な危険な権限構成です。</string>
+    <string name="sec_acc_overlay_title">極めて高いリスク: ユーザー補助＋画面オーバーレイ</string>
+    <string name="sec_acc_overlay_desc">画面の自動操作・覗き見や、フィッシング詐欺用オーバーレイ画面を表示可能なマルウェアの典型パターンです。</string>
+    <string name="sec_target22_sensitive_title">自動一括付与リスク: 古いSDKでの機密権限要求</string>
+    <string name="sec_target22_sensitive_desc">targetSdkVersionが22以下のため、SMSや位置情報、連絡先などの機密権限がインストール時に自動一括付与されます。</string>
+    <string name="sec_contacts_net_title">プライバシー注意: 連絡先アクセス＋インターネット通信</string>
+    <string name="sec_contacts_net_desc">端末のアドレス帳・連絡先データを外部サーバーへ送信可能な権限構成です。</string>
+    <string name="sec_mic_cam_net_title">音声/カメラ＋インターネット通信</string>
+    <string name="sec_mic_cam_net_desc">マイク録音やカメラ撮影を行い、データを外部へ送信可能な権限構成です。</string>
+    <string name="sec_manage_storage_title">全ファイルアクセス権限 (MANAGE_EXTERNAL_STORAGE)</string>
+    <string name="sec_manage_storage_desc">端末内のすべての写真、ドキュメント、ファイルへの広範なアクセスを要求しています。</string>
+    <string name="sec_install_packages_title">アプリのインストール要求権限</string>
+    <string name="sec_install_packages_desc">このアプリが他のAPKパッケージのインストールを要求することを許可します。</string>
+    <string name="sec_phone_state_title">端末の識別情報読み取り (READ_PHONE_STATE)</string>
+    <string name="sec_phone_state_desc">電話番号やSIM情報、通話状態などの端末識別情報へのアクセスを要求しています。</string>
+    <string name="sec_no_permissions_title">要求された権限はありません</string>
+    <string name="sec_no_permissions_desc">このアプリは特別なシステム権限を一切要求していません。</string>
+    <string name="sec_summary_safe">目立ったセキュリティ上の懸念は検出されませんでした。</string>
+    <string name="sec_summary_warning">注意が必要な権限または仕様が含まれています。詳細をご確認ください。</string>
+    <string name="sec_summary_dangerous">危険性の高い署名または権限の組み合わせが検出されました。</string>
+
+    <!-- Additional Parser, Auditor, Dialog and Launcher Strings -->
+    <string name="err_open_file_failed">ファイルを開けませんでした: %1$s</string>
+    <string name="err_missing_base_in_archive">アーカイブ内に基本APK（base.apk）が含まれていません。</string>
+    <string name="err_apk_corrupted">APKファイルが破損しているか、解析できませんでした。</string>
+    <string name="err_app_info_failed">アプリケーション情報を取得できませんでした。</string>
+    <string name="version_not_set">未設定</string>
+    <string name="sec_target_sdk_22_title">レガシー targetSdk 22以下</string>
+    <string name="sec_target_sdk_22_desc">Android 14以降での回避インストールが必要です。</string>
+    <string name="audit_disclaimer">※本診断結果は端末ローカルでの簡易解析結果であり、完全な安全性を保証するものではありません。</string>
+    <string name="audit_consent_checkbox">セキュリティ上の注意点を理解した上で、インストールを続行します。</string>
+    <string name="install_progress_default">インストール中...</string>
+    <string name="install_success_package">インストール完了: %1$s</string>
+    <string name="install_btn_launch">アプリを起動</string>
+    <string name="install_failure_title">インストール失敗</string>
+    <string name="audit_badge_safe">安全</string>
+    <string name="audit_badge_warning">注意</string>
+    <string name="audit_badge_dangerous">危険</string>
+    <string name="security_audit_title">事前セキュリティ監査</string>
+    <string name="audit_btn_collapse">折りたたむ</string>
+    <string name="audit_btn_expand_all">すべて展開</string>
+    <string name="audit_tag_safe">安全</string>
+    <string name="audit_tag_warning">注意</string>
+    <string name="audit_tag_dangerous">危険</string>
+    <string name="app_launch_fallback_settings">設定のアプリ詳細画面を開きます...</string>
+    <string name="app_launch_failed">アプリの起動に失敗しました: %1$s</string>
+
+    <!-- Settings -->
+    <string name="status_auto_connecting_adb">ワイヤレスデバッグに自動接続中...</string>
+    <string name="settings_title">設定</string>
+    <string name="settings_security_policy_title">セキュリティ事前確認ポリシー</string>
+    <string name="settings_security_policy_desc">不正なアプリや危険な権限の侵入を防ぐため、すべてのAPKは署名検証・危険権限の解析・targetSDK判定を実施した上で、ユーザーの明示的な確認を経てインストールされます。</string>
+    <string name="notification_auto_sent_hint">ペア設定用の通知を自動表示しました。開発者オプション画面を開いたまま、上部通知ポップアップをタップして画面の6桁コードをその場ですぐに入力・送信できます。</string>
+    <string name="btn_open_dev_settings_notification">開発者オプションを開く (通知からコード入力)</string>
+</resources>
